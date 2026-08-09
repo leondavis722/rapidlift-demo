@@ -112,7 +112,15 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size
 .hcard p{font-size:14.5px;color:var(--gray)}
 .svc-chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:34px}
 .svc-chips span{background:var(--paper);border:1px solid var(--line);padding:8px 15px;border-radius:99px;font-weight:600;font-size:13.5px;color:#3d4a56}
-.brands-line{text-align:center;margin-top:18px;font-size:13px;color:#7d8792}
+.brand-logos{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:center;align-items:center;margin-top:24px}
+.brand-logos img{height:28px;width:auto;filter:grayscale(1);opacity:.6}
+.brand-logos span{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:14px;color:#aab3bc}
+.brand-logos .bl-lbl{font-family:var(--body);font-weight:600;text-transform:none;font-size:13px;color:#7d8792;width:100%;text-align:center}
+.authority{background:#fff;border-top:1px solid var(--line);padding:24px 0 26px}
+.authority .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 28px}
+.authority .lbl{width:100%;text-align:center;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#8b95a0;margin-bottom:4px}
+.authority img{width:76px;height:76px;object-fit:contain}
+@media(max-width:639px){.authority img{width:56px;height:56px}.authority .wrap{gap:9px 14px}}
 
 /* $39 band */
 .offer39{background:var(--green-bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
@@ -160,7 +168,7 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size
 .rev-car:hover .rev-track{animation-play-state:paused}
 .rev-set{display:flex;gap:16px;padding-right:16px}
 @keyframes revslide{to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.rev-car{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.rev-track{animation:none;width:auto}}
+.rev-track{will-change:transform}
 .rev{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:11px;width:330px;flex:none}
 @media(max-width:479px){.rev{width:280px;padding:18px}}
 .rev p{font-size:14.5px;color:#414c57;flex:1}
@@ -287,6 +295,19 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margi
   </div>
 </div>
 
+<!-- AUTHORITY BADGES -->
+<div class="authority">
+  <div class="wrap">
+    <div class="lbl">Award-Winning Service — Top Rated 2024</div>
+    <img src="../img/badge-google.webp" width="76" height="76" loading="lazy" alt="Google Guaranteed">
+    <img src="../img/badge-bbb.webp" width="76" height="76" loading="lazy" alt="BBB Accredited">
+    <img src="../img/badge-angi.webp" width="76" height="76" loading="lazy" alt="Angi Super Service Award">
+    <img src="../img/badge-homeadvisor.webp" width="76" height="76" loading="lazy" alt="HomeAdvisor Elite Service">
+    <img src="../img/badge-houzz.webp" width="76" height="76" loading="lazy" alt="Best of Houzz">
+    <img src="../img/badge-dasma.webp" width="76" height="76" loading="lazy" alt="DASMA Member">
+  </div>
+</div>
+
 <!-- HOW -->
 <section class="how">
   <div class="wrap">
@@ -313,7 +334,14 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margi
     <div class="svc-chips rv">
       <span>Broken Springs</span><span>Openers</span><span>Off-Track Doors</span><span>Cables &amp; Rollers</span><span>Panel Damage</span><span>New Installation</span><span>Tune-Ups</span>
     </div>
-    <p class="brands-line rv">We service every major brand — LiftMaster, Genie, Chamberlain, Raynor, Wayne Dalton, Clopay &amp; more.</p>
+    <div class="brand-logos rv">
+      <span class="bl-lbl">We service every major brand:</span>
+      <img src="../img/brand-liftmaster.webp" width="135" height="60" loading="lazy" alt="LiftMaster">
+      <img src="../img/brand-genie.webp" width="135" height="60" loading="lazy" alt="Genie">
+      <img src="../img/brand-raynor.webp" width="135" height="60" loading="lazy" alt="Raynor">
+      <img src="../img/brand-waynedalton.webp" width="135" height="60" loading="lazy" alt="Wayne Dalton">
+      <span>Chamberlain</span><span>Clopay</span><span>Amarr</span>
+    </div>
   </div>
 </section>
 
