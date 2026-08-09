@@ -13,6 +13,31 @@
 <link rel="preload" href="../fonts/Archivo-900.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/PublicSans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/tech-hero.webp" as="image" media="(min-width:960px)">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Runs Right Garage Door & Gate Repair",
+  "telephone": "+18332103772",
+  "url": "https://runsright.com",
+  "openingHours": "Mo-Su 00:00-24:00",
+  "priceRange": "$$",
+  "areaServed": ["Naples FL","Sarasota FL","Tampa FL","Port St. Lucie FL","Jacksonville FL","Gainesville FL","Tallahassee FL","Pensacola FL","Phoenix AZ","Seattle WA","Portland OR","Nashville TN","Detroit MI","Las Vegas NV","Indianapolis IN"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What does the $39 service call include?","acceptedAnswer":{"@type":"Answer","text":"A certified technician comes out the same day, diagnoses the problem, and gives you an exact flat-rate quote — all for $39. Approve the repair and the $39 goes toward the work."}},
+    {"@type":"Question","name":"How do you pick the technician who comes to me?","acceptedAnswer":{"@type":"Answer","text":"We hand-pick licensed, background-checked pros in each area and rate them after every job. We dispatch the closest top-rated technician available."}},
+    {"@type":"Question","name":"Do you charge extra for nights, weekends, or holidays?","acceptedAnswer":{"@type":"Answer","text":"No. Our 24/7 availability is real availability — the rate is the same whenever you call."}},
+    {"@type":"Question","name":"How much does a garage door spring replacement cost?","acceptedAnswer":{"@type":"Answer","text":"Most spring replacements fall within a flat-rate range depending on door size and spring type. You get an exact price before any work begins."}},
+    {"@type":"Question","name":"Is the work guaranteed?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every repair is backed by a parts and workmanship warranty, and our quality team reviews each completed job."}}
+  ]
+}
+</script>
 <style>
 @font-face{font-family:'Archivo';src:url('../fonts/Archivo-800.woff2') format('woff2');font-weight:800;font-display:swap}
 @font-face{font-family:'Archivo';src:url('../fonts/Archivo-900.woff2') format('woff2');font-weight:900;font-display:swap}
@@ -110,7 +135,8 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size
 .hcard .ic svg{width:28px;height:28px;fill:var(--green)}
 .hcard h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:18px;margin-bottom:6px}
 .hcard p{font-size:14.5px;color:var(--gray)}
-.svc-chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:34px}
+.chips-lbl{text-align:center;font-weight:700;margin-top:34px;color:var(--navy)}
+.svc-chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:14px}
 .svc-chips span{background:var(--paper);border:1px solid var(--line);padding:8px 15px;border-radius:99px;font-weight:600;font-size:13.5px;color:#3d4a56}
 .brand-logos{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:center;align-items:center;margin-top:24px}
 .brand-logos img{height:28px;width:auto;filter:grayscale(1);opacity:.6}
@@ -178,6 +204,14 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size
 .rev .who span{font-size:12px;color:#7d8792}
 .score-line{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:26px;font-weight:600;color:#42505c;font-size:14.5px}
 .score-line b{font-family:var(--display);font-weight:900;font-size:22px}
+
+/* areas */
+.areas{padding:60px 0;background:#fff;border-top:1px solid var(--line)}
+.area-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px;max-width:820px;margin-left:auto;margin-right:auto}
+.area-pills span{background:var(--paper);border:1.5px solid var(--line);padding:9px 17px;border-radius:99px;font-weight:600;font-size:14px;color:#3d4a56}
+.area-pills span.hot{border-color:var(--green);background:var(--green-bg);color:var(--green-deep);font-weight:700}
+.areas-note{text-align:center;margin-top:20px;font-size:13.5px;color:var(--gray)}
+.areas-note a{color:var(--green-deep);font-weight:700}
 
 /* faq */
 .faq{padding:64px 0}
@@ -331,8 +365,9 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margi
         <p>You approve a flat price before work starts, and our quality team reviews every completed job.</p>
       </div>
     </div>
+    <p class="chips-lbl rv">Whatever’s wrong — we fix it today:</p>
     <div class="svc-chips rv">
-      <span>Broken Springs</span><span>Openers</span><span>Off-Track Doors</span><span>Cables &amp; Rollers</span><span>Panel Damage</span><span>New Installation</span><span>Tune-Ups</span>
+      <span>Broken Spring</span><span>Door Won’t Open</span><span>Stuck Halfway</span><span>Off the Track</span><span>Loud Grinding Noise</span><span>Opener / Remote Dead</span><span>Snapped Cable</span><span>Panel Damage</span><span>New Door Installation</span>
     </div>
     <div class="brand-logos rv">
       <span class="bl-lbl">We service every major brand:</span>
@@ -411,6 +446,30 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margi
     <!-- NOTE: replace with real review texts before launch -->
     <div class="rev-car"><div class="rev-track"><div class="rev-set"><div class="rev"><div class="stars">★★★★★</div><p>"Spring snapped at 7am with my car trapped inside. They answered right away, the tech arrived before 9 and I still made my morning meeting."</p><div class="who"><span class="av">M</span><div><b>Mark R.</b><span>Naples, FL</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"Quoted me exactly what they said on the phone — a lot less than the other company wanted. The tech showed me the worn parts before replacing anything."</p><div class="who"><span class="av">S</span><div><b>Sandra K.</b><span>Phoenix, AZ</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"Door came off track on a Sunday night. Fully expected to wait until Monday — they had someone out within the hour. Polite, clean and fast."</p><div class="who"><span class="av">D</span><div><b>David T.</b><span>Nashville, TN</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"Needed a whole new door. They weren't the cheapest quote, but they were the only ones who actually explained my options. Installation was flawless."</p><div class="who"><span class="av">J</span><div><b>Jennifer M.</b><span>Sarasota, FL</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"New opener installed in under two hours, synced to my phone before he left, and he lubricated the whole door without me asking."</p><div class="who"><span class="av">C</span><div><b>Carlos G.</b><span>Las Vegas, NV</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"Honest crew. Told me my opener just needed a small gear kit instead of pushing a $600 replacement. That honesty earned all my future business."</p><div class="who"><span class="av">E</span><div><b>Emily P.</b><span>Portland, OR</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"Called Saturday morning expecting a weekend surcharge — nope, same price, and the door was running again within the hour."</p><div class="who"><span class="av">K</span><div><b>Mike D.</b><span>Indianapolis, IN</span></div></div></div></div><div class="rev-set" aria-hidden="true"><div class="rev"><div class="stars">★★★★★</div><p>"Spring snapped at 7am with my car trapped inside. They answered right away, the tech arrived before 9 and I still made my morning meeting."</p><div class="who"><span class="av">M</span><div><b>Mark R.</b><span>Naples, FL</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"Quoted me exactly what they said on the phone — a lot less than the other company wanted. The tech showed me the worn parts before replacing anything."</p><div class="who"><span class="av">S</span><div><b>Sandra K.</b><span>Phoenix, AZ</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"Door came off track on a Sunday night. Fully expected to wait until Monday — they had someone out within the hour. Polite, clean and fast."</p><div class="who"><span class="av">D</span><div><b>David T.</b><span>Nashville, TN</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"Needed a whole new door. They weren't the cheapest quote, but they were the only ones who actually explained my options. Installation was flawless."</p><div class="who"><span class="av">J</span><div><b>Jennifer M.</b><span>Sarasota, FL</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"New opener installed in under two hours, synced to my phone before he left, and he lubricated the whole door without me asking."</p><div class="who"><span class="av">C</span><div><b>Carlos G.</b><span>Las Vegas, NV</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"Honest crew. Told me my opener just needed a small gear kit instead of pushing a $600 replacement. That honesty earned all my future business."</p><div class="who"><span class="av">E</span><div><b>Emily P.</b><span>Portland, OR</span></div></div></div><div class="rev"><div class="stars">★★★★★</div><p>"Called Saturday morning expecting a weekend surcharge — nope, same price, and the door was running again within the hour."</p><div class="who"><span class="av">K</span><div><b>Mike D.</b><span>Indianapolis, IN</span></div></div></div></div></div></div>
     <div class="score-line rv"><span class="stars">★★★★★</span><b>4.9</b> average rating across our network</div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas">
+  <div class="wrap">
+    <div class="kicker">Service Areas</div>
+    <h2>Local Pros, Coast to Coast</h2>
+    <p class="center-sub">Technicians stationed in every metro we serve — that’s how we keep same-day arrival.</p>
+    <div class="area-pills rv">
+      <span data-metro="naples">Naples, FL</span>
+      <span data-metro="sarasota,tampa">Sarasota / Tampa, FL</span>
+      <span data-metro="port st. lucie">Port St. Lucie, FL</span>
+      <span data-metro="jacksonville,gainesville">Jacksonville / Gainesville, FL</span>
+      <span data-metro="tallahassee,pensacola">Tallahassee / Pensacola, FL</span>
+      <span data-metro="phoenix">Phoenix, AZ</span>
+      <span data-metro="seattle">Seattle, WA</span>
+      <span data-metro="portland">Portland, OR</span>
+      <span data-metro="nashville">Nashville, TN</span>
+      <span data-metro="detroit,michigan">Michigan — Statewide</span>
+      <span data-metro="las vegas">Las Vegas, NV</span>
+      <span data-metro="indianapolis">Indianapolis, IN</span>
+    </div>
+    <p class="areas-note rv">Don’t see your city? <a class="js-tel" href="tel:+18332103772">Call us</a> — our network is growing every week.</p>
   </div>
 </section>
 
@@ -499,6 +558,10 @@ var LEAD_WEBHOOK = '';
   var strip = document.querySelector('.geo-strip');
   if (strip) strip.textContent = ' — ' + label;
   document.title = 'Garage Door Repair ' + label + ' — Same-Day $39 Service | Runs Right';
+  document.querySelectorAll('.area-pills span').forEach(function(a){
+    if ((a.dataset.metro || '').split(',').some(function(m){ return city.toLowerCase().indexOf(m.trim()) !== -1 || m.trim().indexOf(city.toLowerCase()) !== -1; }))
+      a.classList.add('hot');
+  });
 })();
 
 function track(action, label){
