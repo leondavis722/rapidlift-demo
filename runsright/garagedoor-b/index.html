@@ -12,6 +12,7 @@
 <meta property="og:type" content="website">
 <link rel="preload" href="../fonts/Archivo-900.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/PublicSans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/tech-hero.webp" as="image" media="(min-width:960px)">
 <style>
 @font-face{font-family:'Archivo';src:url('../fonts/Archivo-800.woff2') format('woff2');font-weight:800;font-display:swap}
 @font-face{font-family:'Archivo';src:url('../fonts/Archivo-900.woff2') format('woff2');font-weight:900;font-display:swap}
@@ -85,7 +86,7 @@ header .wrap{display:flex;align-items:center;gap:20px;padding-top:10px;padding-b
 /* illustrated tech card */
 .tcard{position:relative;max-width:430px;margin:0 auto}
 .tcard .art{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 50px rgba(12,31,51,.12);overflow:hidden}
-.tcard .art svg{display:block;width:100%;height:auto}
+.tcard .art img{display:block;width:100%;height:auto}
 .float{position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 26px rgba(12,31,51,.14);padding:10px 14px;font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:8px}
 .float.f1{top:16px;left:-14px}
 .float.f2{bottom:52px;right:-12px}
@@ -114,7 +115,15 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size
 
 /* form */
 .lead{padding:64px 0}
+.lead-grid{display:grid;gap:24px;grid-template-columns:1fr;margin-top:34px;align-items:center}
+@media(min-width:900px){.lead-grid{grid-template-columns:1fr 1fr}}
+.lead-photo{margin:0}
+.lead-photo img{border-radius:16px;box-shadow:0 18px 44px rgba(12,31,51,.10);width:100%;height:auto}
+.lead-photo figcaption{font-size:12.5px;color:var(--gray);margin-top:9px;text-align:center}
+.rev-photo{margin:28px auto 0;max-width:760px}
+.rev-photo img{border-radius:16px;width:100%;height:auto;box-shadow:0 16px 40px rgba(12,31,51,.10)}
 .fcard{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 44px rgba(12,31,51,.08);max-width:560px;margin:34px auto 0;overflow:hidden}
+.lead-grid .fcard{margin:0;max-width:none}
 .fcard .hd{background:var(--navy);color:#fff;padding:16px 24px;text-align:center}
 .fcard .hd b{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:19px;display:block}
 .fcard .hd span{font-size:13px;color:#9fb4c6}
@@ -253,49 +262,7 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margi
     <!-- ILLUSTRATED TECHNICIAN -->
     <div class="tcard rv">
       <div class="art">
-        <svg viewBox="0 0 430 340" role="img" aria-label="Friendly Runs Right technician">
-          <rect width="430" height="340" fill="#EDF6F0"/>
-          <!-- garage door backdrop -->
-          <g fill="#fff" stroke="#D8E2DB" stroke-width="2">
-            <rect x="40" y="34" width="350" height="46" rx="8"/>
-            <rect x="40" y="88" width="350" height="46" rx="8"/>
-            <rect x="40" y="142" width="350" height="46" rx="8"/>
-          </g>
-          <circle cx="215" cy="330" r="150" fill="#DCEFE3"/>
-          <!-- body -->
-          <path d="M215 200 C160 200 128 238 122 340 L308 340 C302 238 270 200 215 200 Z" fill="#13A24A"/>
-          <path d="M215 200 C160 200 128 238 122 340 L152 340 C154 252 180 214 215 206 Z" fill="#0F8A3E"/>
-          <!-- collar -->
-          <path d="M196 202 L215 226 L234 202 L226 196 L215 208 L204 196 Z" fill="#fff"/>
-          <!-- chest logo patch -->
-          <rect x="242" y="238" width="44" height="26" rx="6" fill="#fff"/>
-          <path d="M250 252 L258 245 L262 249 L270 241" fill="none" stroke="#13A24A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- waving arm -->
-          <path d="M282 232 C310 216 322 192 326 168" fill="none" stroke="#13A24A" stroke-width="26" stroke-linecap="round"/>
-          <circle cx="328" cy="158" r="17" fill="#E8B48C"/>
-          <!-- wrench arm -->
-          <path d="M150 238 C136 258 130 276 128 292" fill="none" stroke="#0F8A3E" stroke-width="26" stroke-linecap="round"/>
-          <circle cx="127" cy="300" r="16" fill="#E8B48C"/>
-          <g transform="rotate(-38 127 300)">
-            <rect x="119" y="252" width="16" height="58" rx="7" fill="#7B8894"/>
-            <path d="M113 244 a14 14 0 1 1 28 0 l-6 8 h-16 Z" fill="#7B8894"/>
-          </g>
-          <!-- head -->
-          <circle cx="215" cy="150" r="46" fill="#E8B48C"/>
-          <path d="M177 142 a38 38 0 0 1 76 0 Z" fill="#E8B48C"/>
-          <!-- smile + eyes + brows -->
-          <path d="M197 166 q18 16 36 0" fill="none" stroke="#8A5A34" stroke-width="4.5" stroke-linecap="round"/>
-          <circle cx="199" cy="146" r="5" fill="#3A2A1C"/>
-          <circle cx="231" cy="146" r="5" fill="#3A2A1C"/>
-          <path d="M191 133 q8 -5 16 -1" fill="none" stroke="#7A4E2B" stroke-width="4" stroke-linecap="round"/>
-          <path d="M223 132 q8 -4 16 1" fill="none" stroke="#7A4E2B" stroke-width="4" stroke-linecap="round"/>
-          <!-- cap -->
-          <path d="M170 132 a45 45 0 0 1 90 0 l1 6 H169 Z" fill="#0C1F33"/>
-          <path d="M168 136 h96 a8 8 0 0 1 8 8 v2 H160 v-2 a8 8 0 0 1 8-8 Z" fill="#173A57"/>
-          <path d="M196 118 L206 108 L212 114 L224 100" fill="none" stroke="#2BC46B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- ear -->
-          <circle cx="172" cy="152" r="8" fill="#DDA275"/>
-        </svg>
+        <img src="../img/tech-hero.webp" width="880" height="1100" alt="Friendly licensed garage door technician at a customer home" fetchpriority="high">
       </div>
       <div class="cap">Your local pro — <b>vetted, background-checked &amp; top-rated</b></div>
       <div class="float f1"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 16.2l-4.2-4.2L3.4 13.4 9 19 21 7l-1.4-1.4z"/></svg></span><div>Background-Checked<small>Every technician, every time</small></div></div>
@@ -339,7 +306,7 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margi
     <div class="kicker">Free Quote</div>
     <h2>Tell Us What Broke</h2>
     <p class="center-sub">We usually call back within 5 minutes during business hours.</p>
-    <div class="fcard rv">
+    <div class="lead-grid"><figure class="lead-photo rv"><img src="../img/tech-working.webp" width="900" height="502" loading="lazy" alt="Technician repairing a garage door spring"><figcaption>Real work, done right — then reviewed by our quality team</figcaption></figure><div class="fcard rv">
       <div class="hd"><b>Get My Free Quote</b><span>No obligation · no spam, ever</span></div>
       <div class="bd">
         <form id="lead-form" novalidate>
@@ -372,6 +339,7 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margi
         </a>
       </div>
     </div>
+    </div>
   </div>
 </section>
 
@@ -380,6 +348,7 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margi
   <div class="wrap">
     <div class="kicker">Verified Reviews</div>
     <h2>Neighbors Who Called Once</h2>
+    <figure class="rev-photo rv"><img src="../img/tech-handshake.webp" width="900" height="502" loading="lazy" alt="Technician shaking hands with a happy homeowner"></figure>
     <!-- NOTE: replace with real review texts before launch -->
     <div class="rgrid">
       <div class="rev rv"><div class="stars">★★★★★</div>
