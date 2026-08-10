@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Runs Right — אסטרטגיית Google Ads</title>
+<style>
+:root{--navy:#0C1F33;--green:#13A24A;--paper:#FAF9F6;--line:#e3e0d8}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--paper);color:#1e2a36;margin:0;line-height:1.75}
+.page{max-width:880px;margin:0 auto;padding:44px 28px 90px;background:#fff;min-height:100vh;box-shadow:0 0 40px rgba(12,31,51,.07)}
+h1{color:var(--navy);font-size:30px;border-bottom:4px solid var(--green);padding-bottom:12px;line-height:1.3}
+h2{color:var(--navy);font-size:23px;margin-top:44px;border-right:5px solid var(--green);padding-right:12px}
+h3{color:var(--navy);font-size:18px;margin-top:28px}
+p{margin:10px 0}
+strong{color:var(--navy)}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14.5px}
+th{background:var(--navy);color:#fff;padding:9px 12px;text-align:right}
+td{border:1px solid var(--line);padding:8px 12px}
+tr:nth-child(even) td{background:#f6f8f6}
+code{background:#eef4ef;border:1px solid #dbe7dd;border-radius:4px;padding:1px 6px;font-size:13px;direction:ltr;display:inline-block}
+pre{background:var(--navy);color:#d9f2e2;padding:16px 18px;border-radius:10px;overflow-x:auto;direction:ltr;text-align:left;font-size:13.5px;line-height:1.6}
+pre code{background:none;border:none;color:inherit;padding:0}
+ul,ol{padding-right:24px}
+li{margin:5px 0}
+a{color:var(--green)}
+hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+blockquote{border-right:4px solid var(--green);margin:14px 0;padding:6px 16px;background:#f2f8f3;border-radius:0 8px 8px 0}
+@media print{.page{box-shadow:none;padding:0}}
+</style>
+</head>
+<body>
+<div id="gate" style="position:fixed;inset:0;z-index:99999;background:#0C1F33;display:flex;align-items:center;justify-content:center;font-family:'Segoe UI',sans-serif;">
+  <div style="background:#fff;border-radius:14px;padding:34px 30px;max-width:320px;width:90%;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.4)" dir="rtl">
+    <div style="font-weight:800;font-size:20px;color:#0C1F33;margin-bottom:6px;">Runs Right — מסמך פנימי</div>
+    <div style="font-size:14px;color:#55636F;margin-bottom:18px;">הזן קוד גישה לצפייה</div>
+    <input id="gate-code" type="tel" inputmode="numeric" maxlength="6" placeholder="קוד" style="width:100%;font-size:20px;text-align:center;letter-spacing:.2em;padding:12px;border:1.5px solid #d9d6cf;border-radius:8px;margin-bottom:12px;box-sizing:border-box;">
+    <button id="gate-btn" style="width:100%;background:#13A24A;color:#fff;font-weight:800;font-size:16px;padding:12px;border:0;border-radius:8px;cursor:pointer;">כניסה</button>
+    <div id="gate-err" style="color:#c0392b;font-size:13px;margin-top:10px;display:none;">קוד שגוי, נסה שוב</div>
+  </div>
+</div>
+<script>
+(function(){
+  var g=document.getElementById('gate'),i=document.getElementById('gate-code'),
+      b=document.getElementById('gate-btn'),e=document.getElementById('gate-err');
+  function go(){ if(i.value.trim()==='333'){g.style.display='none';sessionStorage.setItem('rr-strategy-ok','1');} else {e.style.display='block';} }
+  if(sessionStorage.getItem('rr-strategy-ok')==='1'){g.style.display='none';}
+  b.addEventListener('click',go);
+  i.addEventListener('keydown',function(ev){if(ev.key==='Enter')go();});
+})();
+</script>
+<div class="page">
+<h1>Runs Right — אסטרטגיית Google Ads המלאה</h1>
+<h3>גרסה 2.1 · 10 אוגוסט 2026</h3>
+<h3>מבוסס על ניתוח 1,381 מילות מפתח (שלושת הייצואים שלך ממוזגים) + בנצ'מרקים ענפיים מאומתים</h3>
+<p>📊 <strong>הקובץ הנלווה:</strong> <code>RunsRight-AdGroups.xlsx</code> — כל מילה מסווגת, צבועה לפי קבוצה, עם עדיפות וסוג התאמה.</p>
+<hr />
+<h2>1. תקציר מנהלים</h2>
+<p><strong>היעד ($5,000 רווח/חודש) ריאלי החל מחודש 3-4. רווח קטן כבר בחודש 1 — אפשרי אם נפעל לפי "תוכנית הארביטראז'" שבסעיף 5.</strong></p>
+<table>
+<thead>
+<tr>
+<th>חודש</th>
+<th>תקציב יומי</th>
+<th>הוצאה</th>
+<th>עלות/שיחה (יעד)</th>
+<th>עבודות</th>
+<th>הכנסה</th>
+<th>הרווח שלך (45%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — הצתה חכמה</td>
+<td>$100→$150</td>
+<td>~$3,800</td>
+<td>~$75</td>
+<td>~25</td>
+<td>~$10,500</td>
+<td><strong>+$900 (ריאלי: 0 עד +1,500)</strong></td>
+</tr>
+<tr>
+<td>2 — אופטימיזציה</td>
+<td>$150</td>
+<td>$4,500</td>
+<td>~$65</td>
+<td>~38</td>
+<td>~$16,000</td>
+<td><strong>≈ +$2,700</strong></td>
+</tr>
+<tr>
+<td>3 — התייצבות</td>
+<td>$150-180</td>
+<td>$5,000</td>
+<td>~$58</td>
+<td>~48</td>
+<td>~$21,500</td>
+<td><strong>≈ +$4,700</strong></td>
+</tr>
+<tr>
+<td>4 — סקיילינג</td>
+<td>$200-250</td>
+<td>$6,800</td>
+<td>~$58</td>
+<td>~64</td>
+<td>~$28,800</td>
+<td><strong>≈ +$6,200 ✔</strong></td>
+</tr>
+</tbody>
+</table>
+<p>הנחות: סגירת שיחה→עבודה 50-60% · עסקה ממוצעת $400-450 · אימות מול בנצ'מרקים: עלות ליד תיקון בענף $40-80, LSA $45-59.</p>
+<p><strong>התנאי שמעל הכל: מענה מיידי לכל שיחה.</strong> ליד שלא נענה בדקות = כסף למתחרה. אם אחוז הסגירה יורד מ-45% — הבעיה במוקד, לא בפרסום.</p>
+<hr />
+<h2>2. הדאטה — שלושה ייצואים, תמונה אחת שלמה</h2>
+<table>
+<thead>
+<tr>
+<th>ייצוא</th>
+<th>שורש</th>
+<th>מה הוא תרם</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1 (262 מילים)</td>
+<td>שירות, מסונן גיאוגרפית</td>
+<td>וריאציות שירות ארוכות-זנב</td>
+</tr>
+<tr>
+<td>"garage door" (755)</td>
+<td>מוצר</td>
+<td>התקנות + מדדי תחרות/טרנדים; רובו מוצרים ודגמים שנפסלו</td>
+</tr>
+<tr>
+<td><strong>"garage repair" (1,237)</strong></td>
+<td>שירות ארצי</td>
+<td><strong>הליבה: כל מילות התיקון עם נפחים ותחרות אמיתיים</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>סה"כ: 1,381 מילים ייחודיות → 571 נשמרו (368,000 חיפושים ארציים/חודש) → 810 נפסלו</strong> עם סיבה מתועדת לכל אחת ב-XLSX.</p>
+<p>⚠️ <strong>הערת נפחים:</strong> המספרים בייצואים החדשים הם <strong>ארציים</strong> (כל ארה"ב). הנפח בערי היעד שלך הוא נתח מזה — בערך 8-12% לפי גודל המטרואים שנבחר. זה לא משנה את בחירת המילים או המבנה, רק את ציפיות הנפח.</p>
+<hr />
+<h2>3. Broad או Exact? — הדוקטרינה (התשובה לשאלה שלך)</h2>
+<p><strong>השקה: Phrase + Exact בלבד. שום Broad. נקודה.</strong></p>
+<table>
+<thead>
+<tr>
+<th>סוג</th>
+<th>מתי</th>
+<th>למה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exact</strong> <code>[garage door repair]</code></td>
+<td>~40 מילות הכסף (נפח 400+)</td>
+<td>שליטה מלאה במחיר על המונחים שבטוח ממירים</td>
+</tr>
+<tr>
+<td><strong>Phrase</strong> <code>"garage door repair"</code></td>
+<td>כל שאר 303 המילים</td>
+<td>תופס וריאציות ("best garage door repair naples") בלי לברוח לזבל</td>
+</tr>
+<tr>
+<td><strong>Broad</strong></td>
+<td>❌ בהשקה. ✅ רק בחודש 3+</td>
+<td>ראה תנאים למטה</td>
+</tr>
+</tbody>
+</table>
+<p><strong>למה Broad מסוכן דווקא בנישה שלנו:</strong> המילה "garage door" חיה בשני עולמות — שירות (תיקון) ומוצר (קנייה/DIY). ראינו את זה בדאטה שלך: 60,000 חיפושי מוצר, 5,670 חיפושי דגמים, 8,160 חיפושי אפליקציה. Broad match ייקח את "garage door repair" וירחיב אותו ל-"garage door opener lowes" ו-"myq setup" — ואתה תשלם $30 לקליק על אנשים שרוצים לקנות שלט ב-$25.</p>
+<p><strong>מתי כן Broad (חודש 3+), בכל התנאים יחד:</strong>
+1. יש 50+ המרות בחשבון (לאלגוריתם יש ממה ללמוד)
+2. עברנו ל-tCPA (אז גוגל מרחיב רק לחיפושים שדומים לממירים)
+3. מגן שליליות של 100+ מילים בנוי מדוחות אמת
+4. Broad בקמפיין נפרד עם תקציב מוגבל ($30/יום) — לא מערבבים עם הליבה</p>
+<p>וכלל ברזל: <strong>לכבות Auto-Apply Recommendations ביום הראשון</strong> (Settings → Recommendations → כיבוי הכל). גוגל ימליץ "לשדרג ל-Broad" שוב ושוב — זו ההמלצה ששורפת תקציבים בענף הזה.</p>
+<hr />
+<h2>4. שבע קבוצות המודעות (מתוך ה-XLSX — שם הרשימות המלאות)</h2>
+<table>
+<thead>
+<tr>
+<th>קבוצה</th>
+<th>צבע</th>
+<th>מילים</th>
+<th>נפח ארצי/חודש</th>
+<th>Bid גבוה ממוצע</th>
+<th>השקה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AG1 Repair-Core</strong></td>
+<td>🔵</td>
+<td>220</td>
+<td>191,090</td>
+<td>$53</td>
+<td>שבוע 1</td>
+</tr>
+<tr>
+<td><strong>AG2 Emergency</strong></td>
+<td>🔴</td>
+<td>17</td>
+<td>3,220</td>
+<td>$74</td>
+<td>שבוע 1 (עם רסן)</td>
+</tr>
+<tr>
+<td><strong>AG3 Springs</strong></td>
+<td>🟢</td>
+<td>90</td>
+<td>37,880</td>
+<td>$37</td>
+<td>שבוע 1</td>
+</tr>
+<tr>
+<td><strong>AG4 Openers</strong></td>
+<td>🟠</td>
+<td>60</td>
+<td>76,390</td>
+<td>$41</td>
+<td>שבוע 1 ⭐⭐</td>
+</tr>
+<tr>
+<td><strong>AG5 Opener-Brands</strong></td>
+<td>🟣</td>
+<td>33</td>
+<td>13,650</td>
+<td>$57 (תחרות Low!)</td>
+<td>שבוע 1 ⭐</td>
+</tr>
+<tr>
+<td><strong>AG6 Cables/Track/Panels</strong></td>
+<td>🩵</td>
+<td>66</td>
+<td>10,970</td>
+<td>$27</td>
+<td>שבוע 2</td>
+</tr>
+<tr>
+<td><strong>AG7 Install</strong></td>
+<td>🟡</td>
+<td>85</td>
+<td>34,810</td>
+<td>$25</td>
+<td>חודש 2 + דף ייעודי</td>
+</tr>
+</tbody>
+</table>
+<h3>חמש התגליות הכי שוות-כסף בדאטה (התעדכנו עם הייצוא השלישי):</h3>
+<p><strong>⭐⭐ "garage door opener repair" — הפער הגדול בשוק:</strong> 18,100 חיפושים ארציים בתחרות <strong>Low</strong>, קליק $12-65 (מול $21-84 ב-repair הכללי בתחרות High). ביקוש ענק שהמתחרים מזניחים כי כולם רבים על "garage door repair". <strong>מעלים את משקל AG4 בתקציב ההשקה.</strong></p>
+<p><strong>⭐ AG5 — מותגי המנועים בתחרות Low:</strong> "liftmaster garage door repair" 3,600 חיפושים, "genie" 1,300, "chamberlain" 880 — כולם Low. כוונת שירות בוערת (מנוע תקול), מחיר קליק מתחת לשוק.</p>
+<p><strong>⭐ "emergency garage door repair near me"</strong> — 590 חיפושים בתחרות <strong>Low</strong> ($12-93): מילת החירום עם הכוונה הכי חמה, בלי מלחמת הצעות.</p>
+<p><strong>⭐ "garage door service near me"</strong> — 3,600 חיפושים, <strong>+1292% צמיחה שנתית</strong>, תחרות Low(5). להיכנס לפני שהמתחרים מתעוררים.</p>
+<p><strong>⭐ "garage door sensor repair"</strong> — 1,900 חיפושים @ Low, קליק $5-21. עבודה קטנה אבל שגר-ושכח רווחי, ודלת כניסה ללקוח חוזר.</p>
+<p><strong>עונתיות:</strong> שיא ספטמבר (405K) וינואר (395K), שפל אפריל. השקה באוגוסט = בדיוק לפני גל הסתיו — הזמן לבנות Quality Score הוא עכשיו.</p>
+<hr />
+<h2>5. תוכנית "רווח מחודש 1" — הצתה בשלבים לפי ROI</h2>
+<p>במקום להדליק הכל ביום אחד ולשרוף $150/יום על למידה — מדליקים לפי מדרג רווחיות:</p>
+<p><strong>ימים 1-7 · $100/יום · רק "הרובע הזול-חם" (לפי דאטת התחרות):</strong>
+- AG4 מנועים — opener repair @ תחרות Low — 30% תקציב
+- AG5 מותגים (liftmaster/genie/chamberlain repair @ Low) — 20%
+- AG3 קפיצים (כוונה מקסימלית — קפיץ שבור לא מחכה) — 25%
+- AG1 רק Exact עליונים: repair near me, service near me (+1292%) — 15%
+- AG2 חירום: "emergency...near me" @ Low + תקרת CPC $45 — 10%</p>
+<p>ככה הדולרים הראשונים הולכים למקומות שבהם או הקליק זול או הכוונה בוערת — ולא ללמידה על מילים גנריות יקרות.</p>
+<p><strong>ימים 8-14:</strong> מוסיפים את שאר AG1 ו-AG4 (מנועים) בפריסה זהירה, מנקים שליליות פעמיים בשבוע.</p>
+<p><strong>שבוע 3-4 · $150/יום:</strong> AG6 נכנסת, מעבר ל-Max Conversions כשיש ~30 המרות.</p>
+<p><strong>במקביל מהיום הראשון — שני מנועי רווח שאינם PPC:</strong>
+1. <strong>הגשת בקשה ל-Google LSA</strong> (מודעות Google Guaranteed): תשלום פר-ליד ($45-59), לרוב רווחי מהליד הראשון. האישור לוקח שבועות — מגישים עכשיו למדינות ההשקה.
+2. <strong>הטופס באתר</strong> — לוודא שה-webhook מחובר כבר ביום הראשון. ליד מטופס ששולם עליו ולא חוזרים אליו = כסף שרוף.</p>
+<p><strong>ציפייה כנה:</strong> גם עם כל זה, חודש 1 נע בין איזון ל-+$1,500. מי שמבטיח לך רווח גדול בחודש הראשון ב-PPC של דלתות מוסך — משקר. המטרה האמיתית של חודש 1: לצאת ממנו עם מכונה מכוילת ודאטה, בלי הפסד.</p>
+<hr />
+<h2>6. גיאוגרפיה — להתרכז, לא להתפזר</h2>
+<p>$100-150/יום על 12 מטרואים = חצי קליק לעיר ליום. גוגל לא לומד כלום.</p>
+<table>
+<thead>
+<tr>
+<th>קמפיין</th>
+<th>אזורים</th>
+<th>תקציב התחלה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RR-FL-Repair</td>
+<td>Tampa/Sarasota, Naples, Port St. Lucie</td>
+<td>$70/יום</td>
+</tr>
+<tr>
+<td>RR-WEST-Repair</td>
+<td>Phoenix, Las Vegas</td>
+<td>$30-50/יום</td>
+</tr>
+</tbody>
+</table>
+<p><strong>הקריטריון האמיתי לבחירה: איפה רשת הטכנאים שלך עונה הכי מהר וסוגרת הכי טוב.</strong> אם זה נאשוויל ולא פיניקס — תחליף. מרחיבים מטרו נוסף רק אחרי שקמפיין קיים עומד ביעד עלות/שיחה שבועיים רצוף.</p>
+<p>הגדרת מיקום קריטית: Location options → <strong>"Presence"</strong> בלבד (ולא ברירת המחדל "Presence or interest" — שמכניסה מחפשים מניו-יורק שמתעניינים בפלורידה).</p>
+<hr />
+<h2>7. הגדרות קמפיין מלאות</h2>
+<table>
+<thead>
+<tr>
+<th>הגדרה</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>רשת</td>
+<td>Search בלבד · לכבות Display + Search Partners</td>
+</tr>
+<tr>
+<td>Bidding שבועות 1-3</td>
+<td>Maximize Clicks + תקרת CPC $28 (חוץ מ-Emergency: קמפיין הצעות ידני, מקס' $45)</td>
+</tr>
+<tr>
+<td>Bidding מ-30 המרות</td>
+<td>Maximize Conversions → חודש+ אחרי: tCPA $65</td>
+</tr>
+<tr>
+<td>מודעות</td>
+<td>2 RSA לכל קבוצה (טקסטים בסעיף 8) + Call Assets</td>
+</tr>
+<tr>
+<td>Assets</td>
+<td>Call (המספר הווירטואלי) · Sitelinks: $39 Special / Reviews / Same-Day / Service Areas · Callouts: Licensed &amp; Insured, 24/7, Free Quote, Vetted Pros · Structured: Services</td>
+</tr>
+<tr>
+<td>לו"ז</td>
+<td>24/7 (חירום לילי = הלידים השווים) · אחרי חודש בוחנים bid adjustment לשעות 1-5 לפנות בוקר</td>
+</tr>
+<tr>
+<td>מובייל</td>
+<td>בלי התאמה בהתחלה (רוב התנועה ממילא מובייל)</td>
+</tr>
+<tr>
+<td>Final URL</td>
+<td><code>https://runsright.com/garagedoor/?city={City}&amp;state={ST}</code> — לכל קבוצת מודעות לפי העיר שלה</td>
+</tr>
+<tr>
+<td>Tracking template (רמת חשבון)</td>
+<td><code>{lpurl}?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign={campaignid}&amp;utm_term={keyword}&amp;campaignid={campaignid}&amp;adgroupid={adgroupid}&amp;keyword={keyword}&amp;matchtype={matchtype}&amp;device={device}&amp;network={network}&amp;creative={creative}&amp;gclid={gclid}</code></td>
+</tr>
+<tr>
+<td>המרות</td>
+<td>4 פעולות: Call-LP1 / Call-LP2 / Lead-LP1 / Lead-LP2 + ייבוא שיחות CallRail</td>
+</tr>
+<tr>
+<td>Auto-apply</td>
+<td><strong>הכל כבוי</strong></td>
+</tr>
+</tbody>
+</table>
+<h2>8. טקסטים למודעות (RSA)</h2>
+<p><strong>AG1/AG2 — Repair &amp; Emergency:</strong></p>
+<pre><code>H: Garage Door Repair {LOCATION(City)} · Fixed Today — Call Now · Same-Day $39 Service Call
+   We Answer In Seconds · Open 24/7 · Licensed &amp; Insured Pros · 4.9★ Top-Rated Local Techs
+   Flat Price — You Approve First · Most Repairs Done In 1 Visit
+D: Broken spring, opener or off-track door? A vetted local pro arrives today. $39 service call applied toward your repair.
+D: We answer in seconds, dispatch the closest top-rated tech, and quote a flat price before any work starts.
+</code></pre>
+<p><strong>AG3 — Springs:</strong> H ראשי: "Broken Garage Door Spring?" / "Spring Replaced Today" / "Spring Repair {LOCATION(City)}"
+<strong>AG4/AG5 — Openers:</strong> H ראשי: "Garage Opener Repair Today" / "LiftMaster &amp; Genie Experts" / "Opener Dead? We Fix It Fast"
+<strong>AG7 — Install (חודש 2):</strong> H ראשי: "New Garage Door Installed" / "Free On-Site Estimate"</p>
+<h2>9. שליליות — המגן (הרשימה המלאה בטאב Negative Keywords ב-XLSX)</h2>
+<p>87 מילים ברמת חשבון מהיום הראשון: DIY/הדרכות, חלקים/קמעונאות (lowes, parts, kit), אביזרים (remote, battery, myq), דגמים, מותגי יצרני דלתות (clopay, amarr — מחפשיהם קונים דלת בחנות), מתחרים (a1, precision, sears), מסחרי, שערים (עד קמפיין הגייטס), משרות, עסקאות נמוכות (seal, keypad).</p>
+<p><strong>הטקס השבועי החשוב ביותר (15 דק', כל יום שני):</strong> דוח Search Terms → כל חיפוש לא רלוונטי → שלילית. בחודש הראשון זה ההבדל בין $90 ל-$60 לשיחה.</p>
+<h2>10. לוח בקרה שבועי</h2>
+<table>
+<thead>
+<tr>
+<th>מדד</th>
+<th>יעד ח'1</th>
+<th>יעד ח'3</th>
+<th>נורה אדומה → פעולה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>עלות לשיחה</td>
+<td>&lt; $85</td>
+<td>&lt; $60</td>
+<td>&gt; $120 → להקפיא את הקבוצה היקרה, לא את הכל</td>
+</tr>
+<tr>
+<td>שיחה → עבודה</td>
+<td>&gt; 45%</td>
+<td>&gt; 55%</td>
+<td>&lt; 40% → בעיית מענה/מוקד, לא פרסום</td>
+</tr>
+<tr>
+<td>עסקה ממוצעת</td>
+<td>&gt; $350</td>
+<td>&gt; $420</td>
+<td>&lt; $300 → לבדוק תמהיל עבודות</td>
+</tr>
+<tr>
+<td>הכנסה ÷ פרסום</td>
+<td>&gt; 2.3x</td>
+<td>&gt; 4x</td>
+<td>&lt; 1.8x שבועיים → עוצרים סקיילינג</td>
+</tr>
+<tr>
+<td>% חיפושים לא רלוונטיים</td>
+<td>&lt; 25%</td>
+<td>&lt; 10%</td>
+<td>&gt; 35% → יום שליליות מרוכז</td>
+</tr>
+<tr>
+<td>A/B: עלות/שיחה LP1 vs LP2</td>
+<td>איסוף</td>
+<td>הכרעה ב-200-300 קליק/גרסה</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2>11. סיכום — סדר פעולות להשקה</h2>
+<ol>
+<li>☐ CallRail — מספר + הדבקת סקריפט (אני מטמיע)</li>
+<li>☐ Google Ads: חשבון, כיבוי auto-apply, 4 פעולות המרה, tracking template</li>
+<li>☐ מילוי CONFIG בשני הדפים (GTAG + labels + webhook) — אני מטמיע</li>
+<li>☐ ייבוא קבוצות מה-XLSX + שליליות + RSA</li>
+<li>☐ הגשת LSA למדינות ההשקה (במקביל!)</li>
+<li>☐ ביקורות אמיתיות בדפים</li>
+<li>☐ Launch לפי סעיף 5 — הרובע הזול-חם קודם</li>
+<li>☐ שני בבוקר: דוח Search Terms + לוח הבקרה. כל שבוע. בלי יוצא מהכלל.</li>
+</ol>
+<hr />
+<h3>מקורות</h3>
+<ul>
+<li><a href="https://searchlightdigital.io/garage-door-google-ads-cost-per-lead/">Searchlight — Garage Door Google Ads CPL 2026</a> · <a href="https://searchlightdigital.io/garage-door-google-lsa-cost-per-lead/">Searchlight — LSA CPL</a></li>
+<li><a href="https://elevarus.com/garage-door-google-ads-cpl-benchmarks-by-job-type/">Elevarus — CPL by Job Type</a> · <a href="https://localiq.com/blog/home-services-search-advertising-benchmarks/">LocaliQ — Home Services Benchmarks</a> · <a href="https://garagedoormarketers.com/2025-market-report">Garage Door Marketers — 2025 Report</a></li>
+</ul>
+</div></body>
+</html>
